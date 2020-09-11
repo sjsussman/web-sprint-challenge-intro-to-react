@@ -1,7 +1,22 @@
 import React from 'react';
 import './App.css';
 import Character from './components/Character'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+
+
+const titleAnimation = keyframes`
+  
+  30%{
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`
 
 const StyledContainer = styled.div`
 background: ${pr => pr.theme.backgroundColor};
@@ -9,7 +24,8 @@ background: ${pr => pr.theme.backgroundColor};
 const StyledH1 = styled.h1`
 font-size: 5rem;
 text-align: center;
-color: ${pr => pr.theme.titleColor}
+color: ${pr => pr.theme.titleColor};
+animation: ${titleAnimation} 5s;
 `
 
 const App = () => {
