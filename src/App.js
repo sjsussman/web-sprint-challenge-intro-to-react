@@ -25,7 +25,7 @@ const StyledH1 = styled.h1`
 font-size: 5rem;
 text-align: center;
 animation: ${titleAnimation} 5s;
-margin-bottom: 10%;
+margin-bottom: 5%;
 border: 2px solid white;
 padding: 3%;
 `
