@@ -24,15 +24,25 @@ background: ${pr => pr.theme.backgroundColor};
 const StyledH1 = styled.h1`
 font-size: 5rem;
 text-align: center;
-color: ${pr => pr.theme.titleColor};
 animation: ${titleAnimation} 5s;
+margin-bottom: 10%;
+border: 2px solid white;
+padding: 3%;
+`
+
+const GreenSpan = styled.span`
+color: ${pr => pr.theme.primaryColor};
+`
+
+const WhiteSpan = styled.span`
+color: ${pr => pr.theme.white};
 `
 
 const App = () => {
 //app(mainpage) -> character(loop, create props) ->charactercard (append props create object) // stretch?
   return (
     <StyledContainer>
-      <StyledH1>Rick & Morty Characters</StyledH1>
+      <StyledH1><GreenSpan>Rick</GreenSpan> <WhiteSpan>&</WhiteSpan> <GreenSpan>Morty</GreenSpan> <WhiteSpan>Characters</WhiteSpan></StyledH1>
       <Character />
     </StyledContainer>
   );

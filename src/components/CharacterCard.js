@@ -19,8 +19,8 @@ align-items: center;
 `
 const StyledH2 = styled.h2`
 font-size: ${pr => pr.theme.nameSize};
-text-decoration: underline;
-color: ${pr => pr.theme.white};
+color: ${pr => pr.theme.nameColor};
+margin:0;
 
 transition: all 0.3s ease-in-out;
 &:hover {
@@ -28,22 +28,23 @@ transition: all 0.3s ease-in-out;
 color: ${pr => pr.theme.primaryColor};
 }
 `
-
+//image spin
 const Image = styled.img`
 &:hover{
 animation: ${spin} 3s;
 }
 `
-
+//h3 styles
 const StyledH3 = styled.h3`
 font-size: ${pr => pr.theme.infoSize};
 margin: ${pr => pr.theme.infoMargin};
 color: ${pr => pr.theme.white};
 `
+//key color span
 const StyledSpan = styled.span`
 color: ${pr => pr.theme.primaryColor};
 `
-
+//spoiler warning span
 const Spoiler = styled.span`
 opacity: 0;
 

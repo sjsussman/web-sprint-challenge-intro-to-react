@@ -9,4 +9,7 @@
 
 body{
   font-size: 62.5%;
+  font-family: 'Schoolbell', cursive;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
