@@ -9,7 +9,7 @@ background: ${pr => pr.theme.backgroundColor};
 const StyledH1 = styled.h1`
 font-size: 5rem;
 text-align: center;
-color: ${pr => pr.theme.primaryColor}
+color: ${pr => pr.theme.titleColor}
 `
 
 const App = () => {

@@ -1,19 +1,45 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 
+const CardContainer = styled.div`
+display: flex;
+flex-direction: column;
+border-bottom: 3px double red;
+justify-content: center;
+align-items: center;
+`
+const StyledH2 = styled.h2`
+font-size: ${pr => pr.theme.nameSize};
+text-decoration: underline;
+color: ${pr => pr.theme.white};
+`
+
+const StyledH3 = styled.h3`
+font-size: ${pr => pr.theme.infoSize};
+margin: ${pr => pr.theme.infoMargin};
+color: ${pr => pr.theme.white};
+`
+
+const StyledSpan = styled.span`
+color: ${pr => pr.theme.primaryColor};
+`
+const Break = styled.div`
+margin: 2%;
+`
 
 
 const CharacterCard = (props) => {
     return(
-        <div>
-            <h2>{props.name}</h2>
+        <CardContainer>
+            <StyledH2>{props.name}</StyledH2>
             <img src = {props.photo} alt = 'character img' />
-            <h3>Last Known Location: {props.location.name}</h3>
-            <h3>Status: {props.status}</h3>
-            <h3>Gender: {props.gender}</h3>
-            <h3>Species: {props.species}</h3>
-        </div>
+            <StyledH3><StyledSpan>Last Known Location:</StyledSpan> {props.location.name}</StyledH3>
+            <StyledH3><StyledSpan>Status: </StyledSpan>{props.status}</StyledH3>
+            <StyledH3><StyledSpan>Gender: </StyledSpan>{props.gender}</StyledH3>
+            <StyledH3><StyledSpan>Species: </StyledSpan>{props.species}</StyledH3>
+            <Break></Break>
+        </CardContainer>
     );
 }
 
